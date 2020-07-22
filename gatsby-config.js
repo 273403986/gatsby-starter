@@ -55,6 +55,28 @@ const plugins = [
       // patterns: `docs/**`
     }
   },
+  // {
+  //   resolve: `gatsby-source-github-api`,
+  //   options: {
+  //     // url: API URL to use. Defaults to  https://api.github.com/graphql
+  //     url: 'https://github.com/273403986/docsify-project',
+  //     // token: required by the GitHub API
+  //     token: 'code-settings-sync',
+  //   }
+  // },
+  // {
+  //   resolve: "gatsby-plugin-tidy",
+  //   options: {
+  //       cleanPublic: true,
+  //       cleanCache: true,
+  //       removeHashes: true,
+  //       removeArtifacts: true,
+  //       noJsMap: true,
+  //       removeInlineStyles: true,
+  //       jsDir: "js",
+  //       cssDir: "css"
+  //   }
+  // },
 ];
 
 // check and add algolia

@@ -32,10 +32,12 @@
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.3.7",
     "gatsby-plugin-sitemap": "^2.2.24",
+    "gatsby-plugin-tidy": "^1.0.1",
     "gatsby-remark-copy-linked-files": "^2.1.33",
     "gatsby-remark-images": "^3.1.37",
     "gatsby-source-filesystem": "^2.1.42",
     "gatsby-source-git": "^1.1.0",
+    "gatsby-source-github-api": "^0.2.1",
     "gatsby-transformer-remark": "^2.6.42",
     "graphql": "^14.5.8",
     "is-absolute-url": "^3.0.3",
@@ -59,7 +61,8 @@
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
-    "lint": "eslint --fix \"src/**/*.{js,jsx}\""
+    "lint": "eslint --fix \"src/**/*.{js,jsx}\"",
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
