@@ -13,20 +13,33 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `
-          {
-            allMdx {
-              edges {
-                node {
-                  fields {
-                    id
-                  }
-                  tableOfContents
-                  fields {
-                    slug
-                  }
+        {
+          allMdx {
+            edges {
+              node {
+                fields {
+                  id
+                }
+                tableOfContents
+                fields {
+                  slug
                 }
               }
             }
+          }
+          posts: allMdx {
+            edges {
+              node {
+                fields {
+                  id
+                }
+                tableOfContents
+                fields {
+                  slug
+                }
+              }
+            }
+          }
           }
         `
       ).then(result => {
@@ -34,12 +47,20 @@ exports.createPages = ({ graphql, actions }) => {
           console.log(result.errors); // eslint-disable-line no-console
           reject(result.errors);
         }
-
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
           createPage({
-            path: node.fields.slug ? node.fields.slug : '/',
+            path: `/tags${node.fields.slug}`,
             component: path.resolve('./src/templates/docs.js'),
+            context: {
+              id: node.fields.id,
+            },
+          });
+        });
+        result.data.posts.edges.forEach(({ node }) => {
+          createPage({
+            path: node.fields.slug ? node.fields.slug : '/',
+            component: path.resolve('./src/templates/test.js'),
             context: {
               id: node.fields.id,
             },

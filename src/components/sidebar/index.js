@@ -107,6 +107,7 @@ const SidebarLayout = ({ location }) => (
       }
     `}
     render={({ allMdx }) => {
+      console.log(allMdx, 11111)
       return (
         <Sidebar>
           {config.sidebar.title ? (
