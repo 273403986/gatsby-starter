@@ -75,7 +75,6 @@ export default class MDXRuntimeTest extends Component {
     canonicalUrl =
       config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
     canonicalUrl = canonicalUrl + mdx.fields.slug;
-    console.log(this.props, 222222)
     return (
       <Layout {...this.props}>
         <Helmet>

@@ -77,6 +77,7 @@ const plugins = [
   //       cssDir: "css"
   //   }
   // },
+  
   // {
   //   resolve: "gatsby-plugin-netlify-cache",
   //   options: {
