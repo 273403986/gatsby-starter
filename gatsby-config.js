@@ -77,6 +77,17 @@ const plugins = [
   //       cssDir: "css"
   //   }
   // },
+  // {
+  //   resolve: "gatsby-plugin-netlify-cache",
+  //   options: {
+  //     cachePublic: true,
+  //     // extraDirsToCache: [
+  //     //   "extraDir",
+  //     //   ".extraDotDir",
+  //     //   "extra/dir"
+  //     // ]
+  //   }
+  // }
 ];
 
 // check and add algolia
